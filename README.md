@@ -18,7 +18,7 @@
 
 ```js
 import { defineConfig } from "vite"
-import react from "vite-plugin-"
+import react from "@vitejs/plugin-react"
 import router from "vite-plugin-tsr-cli";
 
 export default defineConfig({
