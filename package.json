@@ -1,8 +1,8 @@
 {
   "name": "vite-plugin-tsr-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vite Plugin for the Tanstack Router CLI",
-  "repository": "#b3nten/vite-plugin-tsr-cli",
+  "repository": "@b3nten/vite-plugin-tsr-cli",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
