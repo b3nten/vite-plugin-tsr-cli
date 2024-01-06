@@ -4,7 +4,8 @@ import jiti from "jiti";
 import { join } from "path";
 import { readFile } from "fs/promises";
 
-const generator = jiti(__dirname)(
+
+const generator = jiti(import.meta.url)(
 	"@tanstack/router-cli/src/generator"
 ).generator;
 
