@@ -1,0 +1,53 @@
+{
+  "name": "vite-plugin-tsr-cli",
+  "version": "0.0.0",
+  "description": "Vite Plugin for the Tanstack Router CLI",
+  "repository": "#b3nten/vite-plugin-tsr-cli",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "tsx src",
+    "play": "tsx playground",
+    "browser": "vite",
+    "lint": "oxlint && prettier -c src test playground",
+    "format": "prettier --write src test playground",
+    "prepack": "pnpm run build",
+    "release": "changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "test:types": "tsc --noEmit --skipLibCheck"
+  },
+  "packageManager": "pnpm@8.10.0",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@vitest/coverage-v8": "^0.34.6",
+    "changelogen": "^0.5.5",
+    "oxlint": "^0.0.20",
+    "prettier": "^3.0.3",
+    "tsx": "^4.6.2",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "vite": "5.0.11",
+    "@tanstack/react-router": "^1.1.7"
+  },
+  "dependencies": {
+    "@tanstack/router-cli": "^1.1.7",
+    "jiti": "^1.21.0"
+  }
+}
